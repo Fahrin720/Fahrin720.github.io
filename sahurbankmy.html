@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SAHUR BANK BERHAD (199801003344) | Perbankan Individu, Korporat & Premier Wealth</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Playfair+Display:wght@700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+  <style>
+    /* LARANGAN MUTLAK: TIADA ROUNDED SQUARE / BORDER-RADIUS PADA MANA-MANA ELEMEN */
+    *, *::before, *::after {
+      border-radius: 0px !important;
+    }
+    body {
+      font-family: 'IBM Plex Sans', sans-serif;
+      background-color: #f8fafc;
+      color: #090d16;
+      overflow-x: hidden;
+    }
+    .font-serif-corp {
+      font-family: 'Playfair Display', serif;
+    }
+    .font-mono-corp {
+      font-family: 'JetBrains Mono', monospace;
+    }
+    @keyframes tickerMove {
+      0% { transform: translateX(0%); }
+      100% { transform: translateX(-50%); }
+    }
+    .ticker-track {
+      display: flex;
+      width: max-content;
+      animation: tickerMove 30s linear infinite;
+    }
+    .sharp-card {
+      background: #ffffff;
+      border: 2px solid #090d16;
+      box-shadow: 6px 6px 0px #090d16;
+      transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+    }
+    .sharp-card:hover {
+      transform: translate(-2px, -2px);
+      border-color: #d97706;
+      box-shadow: 8px 8px 0px #d97706;
+    }
+    .btn-corp-gold {
+      background-color: #d97706;
+      color: #090d16;
+      border: 2px solid #090d16;
+      box-shadow: 4px 4px 0px #090d16;
+      font-weight: 700;
+      transition: all 0.15s ease;
+    }
+    .btn-corp-gold:hover {
+      background-color: #f59e0b;
+      transform: translate(-1px, -1px);
+      box-shadow: 6px 6px 0px #090d16;
+    }
+    .btn-corp-dark {
+      background-color: #090d16;
+      color: #ffffff;
+      border: 2px solid #d97706;
+      box-shadow: 4px 4px 0px #d97706;
+      font-weight: 700;
+      transition: all 0.15s ease;
+    }
+    .btn-corp-dark:hover {
+      background-color: #1e293b;
+      transform: translate(-1px, -1px);
+      box-shadow: 6px 6px 0px #d97706;
+    }
+    .yes-exec-btn {
+      background-color: #052e16;
+      color: #4ade80;
+      border: 2px solid #4ade80;
+      box-shadow: 4px 4px 0px #4ade80;
+      transition: all 0.15s ease;
+    }
+    .yes-exec-btn:hover {
+      background-color: #4ade80;
+      color: #052e16;
+      box-shadow: 6px 6px 0px #ffffff;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+  <!-- 1. BAR SEGMEN INSTITUSI (Gaya Maybank2u / CIMB / RHB) -->
+  <div class="bg-[#090d16] text-slate-300 border-b border-amber-500/50 text-xs">
+    <div class="max-w-7xl mx-auto px-4 py-2 flex flex-wrap items-center justify-between gap-2">
+      <div class="flex items-center space-x-3 sm:space-x-5 font-semibold uppercase tracking-wider">
+        <a href="#utama" class="text-amber-400 border-b-2 border-amber-400 pb-0.5">Perbankan Individu</a>
+        <span class="text-slate-700">|</span>
+        <a href="#produk" class="hover:text-white">Perbankan Korporat</a>
+        <span class="text-slate-700">|</span>
+        <a href="#lembaga" class="hover:text-white">Sahur Premier Wealth</a>
+        <span class="text-slate-700 hidden md:inline">|</span>
+        <a href="#kalkulator" class="hidden md:inline hover:text-white">Perbendaharaan Kayu</a>
+      </div>
+      <div class="flex items-center space-x-4 font-mono-corp text-[11px]">
+        <span class="text-amber-400">TALIAN KECEMASAN SAHUR: 1-300-88-0300</span>
+        <span class="hidden sm:inline text-emerald-400">DILINDUNGI PIDM (PERBADANAN INSURANS DANA MEME)</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. TICKER KADAR PERTUKARAN & AMARAN KESELAMATAN -->
+  <div class="bg-amber-500 text-[#090d16] border-b-2 border-[#090d16] py-1.5 overflow-hidden text-xs font-bold">
+    <div class="ticker-track">
+      <span class="mx-6">⚠️ AMARAN KESELAMATAN: SAHUR BANK TIDAK AKAN MEMINTA TAC MELALUI KETUKAN TINGKAP PUKUL 3:00 PAGI</span>
+      <span class="mx-6 font-mono-corp">📊 INDEKS KAYU JATI (KJI): RM 500.00 / BATANG (+8.45%)</span>
+      <span class="mx-6 font-mono-corp">🏖️ RIZAB DANA HOMESTAY PANTAI CEO: RM 18,420,900.00</span>
+      <span class="mx-6 font-mono-corp">🥁 KADAR ASAS SAHUR (SSR): 3.00% SETIAP KETUKAN KENTUNGAN</span>
+      <span class="mx-6">⚠️ AMARAN KESELAMATAN: SAHUR BANK TIDAK AKAN MEMINTA TAC MELALUI KETUKAN TINGKAP PUKUL 3:00 PAGI</span>
+      <span class="mx-6 font-mono-corp">📊 INDEKS KAYU JATI (KJI): RM 500.00 / BATANG (+8.45%)</span>
+    </div>
+  </div>
+
+  <!-- 3. HEADER NAVIGASI KORPORAT -->
+  <header class="sticky top-0 z-40 bg-white border-b-2 border-[#090d16]">
+    <div class="max-w-7xl mx-auto px-4 py-3.5 flex flex-wrap items-center justify-between gap-4">
+      <!-- Identiti Korporat -->
+      <div class="flex items-center space-x-3">
+        <div class="w-11 h-11 bg-[#090d16] border-2 border-amber-500 flex items-center justify-center text-amber-400 font-serif-corp font-extrabold text-xl">
+          SB
+        </div>
+        <div>
+          <div class="font-serif-corp font-extrabold text-lg sm:text-xl tracking-tight text-[#090d16] leading-none">
+            SAHUR BANK BERHAD
+          </div>
+          <div class="text-[10px] font-mono-corp uppercase tracking-widest text-amber-700 font-bold mt-0.5">
+            Diasaskan Oleh YBhg. Dato' Sri Tung Tung Tung Sahur
+          </div>
+        </div>
+      </div>
+
+      <!-- Pautan Navigasi -->
+      <nav class="hidden lg:flex items-center space-x-6 text-xs font-bold uppercase tracking-wider text-slate-800">
+        <a href="#utama" class="hover:text-amber-600 py-1">Utama</a>
+        <a href="#produk" class="hover:text-amber-600 py-1">Produk &amp; Insentif</a>
+        <a href="#lembaga" class="hover:text-amber-600 py-1">Kepimpinan Eksekutif</a>
+        <a href="#kalkulator" class="hover:text-amber-600 py-1">Kalkulator Pembiayaan</a>
+      </nav>
+
+      <!-- Butang Tindakan -->
+      <div class="flex items-center space-x-3">
+        <button id="topClaimBtn" type="button" class="btn-corp-gold px-4 py-2 text-xs uppercase tracking-wider cursor-pointer">
+          Tuntut Insentif RM 500
+        </button>
+        <button id="topLoginBtn" type="button" class="btn-corp-dark px-4 py-2 text-xs uppercase tracking-wider cursor-pointer">
+          🔒 SAHUR2U ONLINE
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 4. HERO SECTION: CEO ENCIK TUNG TUNG SAHUR & MENARA SAHUR BANK -->
+  <section id="utama" class="bg-[#090d16] text-white border-b-4 border-amber-500">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12">
+      <!-- Kiri: Teks Korporat & CTA -->
+      <div class="lg:col-span-6 p-6 sm:p-10 lg:p-12 flex flex-col justify-center border-b lg:border-b-0 lg:border-r border-slate-800">
+        <div class="inline-block bg-amber-500 text-[#090d16] font-mono-corp text-xs font-bold uppercase px-3 py-1 mb-4 w-max border border-white">
+          LAPORAN KEWANGAN SUKU KE-4 • MENARA SAHUR BANK
+        </div>
+        <h1 class="font-serif-corp text-3xl sm:text-5xl font-extrabold tracking-tight leading-tight">
+          Keteguhan Kayu Jati, <span class="text-amber-400">Kemewahan Homestay Kami.</span>
+        </h1>
+        <p class="mt-4 text-sm sm:text-base text-slate-300 leading-relaxed">
+          Di bawah kepimpinan berwawasan Ketua Pegawai Eksekutif Kumpulan, <strong>YBhg. Dato' Sri Tung Tung Tung Sahur</strong>, Sahur Bank Berhad menawarkan pemprosesan dana mikro-gig <strong>RM 500.00</strong> secara automatik melalui sistem pengesahan dwi-pilihan eksklusif kami: <em>Yes</em> atau <em>Yes</em>.
+        </p>
+
+        <!-- Kotak Statistik Korporat (100% Bucu Tajam) -->
+        <div class="grid grid-cols-3 border-2 border-slate-700 bg-slate-900 mt-6">
+          <div class="p-3.5 border-r border-slate-700">
+            <div class="font-mono-corp text-lg sm:text-2xl font-bold text-amber-400">RM 500</div>
+            <div class="text-[10px] uppercase tracking-wider text-slate-400">Geran Insentif Gig</div>
+          </div>
+          <div class="p-3.5 border-r border-slate-700">
+            <div class="font-mono-corp text-lg sm:text-2xl font-bold text-emerald-400">RM 0.02</div>
+            <div class="text-[10px] uppercase tracking-wider text-slate-400">Baki Selepas Klik</div>
+          </div>
+          <div class="p-3.5">
+            <div class="font-mono-corp text-lg sm:text-2xl font-bold text-white">AA+</div>
+            <div class="text-[10px] uppercase tracking-wider text-slate-400">Penarafan Kentungan</div>
+          </div>
+        </div>
+
+        <div class="mt-7 flex flex-wrap gap-4">
+          <button id="heroModalBtn" type="button" class="btn-corp-gold px-6 py-3.5 text-xs sm:text-sm uppercase tracking-wider cursor-pointer">
+            Sahkan Pengeluaran RM 500 Sekarang →
+          </button>
+          <a href="#kalkulator" class="bg-slate-900 hover:bg-slate-800 text-white border-2 border-slate-600 px-5 py-3.5 text-xs sm:text-sm font-bold uppercase tracking-wider">
+            Simulasi Pembiayaan
+          </a>
+        </div>
+      </div>
+
+      <!-- Kanan: Gambar CEO Encik Tung Tung Sahur & Bangunan Menara Sahur Bank -->
+      <div class="lg:col-span-6 bg-slate-900 flex flex-col justify-between relative">
+        <div class="relative w-full h-full min-h-[340px] bg-slate-950 overflow-hidden flex items-center justify-center">
+          <img
+            src="hero-ceo.jpg"
+            alt="YBhg. Dato' Sri Tung Tung Tung Sahur di hadapan Menara Sahur Bank Berhad"
+            class="w-full h-full object-cover"
+            onerror="this.style.display='none'; document.getElementById('heroSvgFallback').classList.remove('hidden');"
+          />
+          <!-- Fallback Ilustrasi Vektor Tajam jika fail hero-ceo.jpg belum dimuat naik -->
+          <svg id="heroSvgFallback" viewBox="0 0 800 500" class="hidden w-full h-full object-cover" xmlns="http://www.w3.org/2000/svg">
+            <rect width="800" height="500" fill="#0f172a"/>
+            <rect x="60" y="90" width="280" height="410" fill="#090d16" stroke="#f59e0b" stroke-width="3"/>
+            <rect x="80" y="105" width="240" height="32" fill="#f59e0b"/>
+            <text x="200" y="126" text-anchor="middle" fill="#090d16" font-family="IBM Plex Sans, sans-serif" font-weight="800" font-size="15">MENARA SAHUR BANK</text>
+            <polygon points="410,500 450,300 690,300 730,500" fill="#1e293b" stroke="#f59e0b" stroke-width="3"/>
+            <polygon points="530,300 610,300 570,410" fill="#ffffff"/>
+            <polygon points="560,315 580,315 585,405 570,425 555,405" fill="#f59e0b"/>
+            <rect x="495" y="95" width="150" height="215" fill="#92400e" stroke="#451a03" stroke-width="4"/>
+            <rect x="515" y="145" width="45" height="52" fill="#ffffff" stroke="#090d16" stroke-width="4"/>
+            <rect x="530" y="162" width="20" height="24" fill="#090d16"/>
+            <rect x="580" y="145" width="45" height="52" fill="#ffffff" stroke="#090d16" stroke-width="4"/>
+            <rect x="595" y="162" width="20" height="24" fill="#090d16"/>
+            <rect x="522" y="245" width="96" height="34" fill="#ffffff" stroke="#090d16" stroke-width="3"/>
+          </svg>
+        </div>
+        <div class="bg-[#090d16] p-4 border-t-2 border-amber-500 flex items-center justify-between text-xs">
+          <div>
+            <span class="text-amber-400 font-bold uppercase">YBhg. Dato' Sri Tung Tung Tung Sahur</span>
+            <span class="text-slate-400 block">Ketua Pegawai Eksekutif Kumpulan &amp; Pengasas, di Plaza Menara Sahur Bank</span>
+          </div>
+          <span class="bg-amber-500 text-[#090d16] font-mono-corp px-2.5 py-1 font-bold">
+            MENARA UTAMA KL
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. RIBEN TINDAKAN PANTAS (4 KOTAK BUCU TAJAM) -->
+  <section class="bg-white border-b-2 border-[#090d16]">
+    <div class="max-w-7xl mx-auto grid grid-cols-2 lg:grid-cols-4 divide-x divide-y lg:divide-y-0 divide-[#090d16]">
+      <button type="button" class="trigger-modal p-5 text-left hover:bg-amber-50 transition flex items-start space-x-3 cursor-pointer">
+        <span class="bg-[#090d16] text-amber-400 font-mono-corp font-bold px-2.5 py-1 text-xs border border-amber-500">01</span>
+        <div>
+          <div class="font-bold text-xs sm:text-sm uppercase text-[#090d16]">Tebus Insentif RM 500</div>
+          <div class="text-xs text-slate-600 mt-0.5">Kelulusan Pantas "Yes / Yes"</div>
+        </div>
+      </button>
+      <button type="button" class="trigger-modal p-5 text-left hover:bg-amber-50 transition flex items-start space-x-3 cursor-pointer">
+        <span class="bg-[#090d16] text-amber-400 font-mono-corp font-bold px-2.5 py-1 text-xs border border-amber-500">02</span>
+        <div>
+          <div class="font-bold text-xs sm:text-sm uppercase text-[#090d16]">Kad Kredit Kayu 24K</div>
+          <div class="text-xs text-slate-600 mt-0.5">Tajaan Penuh Percutian CEO</div>
+        </div>
+      </button>
+      <button type="button" class="trigger-modal p-5 text-left hover:bg-amber-50 transition flex items-start space-x-3 cursor-pointer">
+        <span class="bg-[#090d16] text-amber-400 font-mono-corp font-bold px-2.5 py-1 text-xs border border-amber-500">03</span>
+        <div>
+          <div class="font-bold text-xs sm:text-sm uppercase text-[#090d16]">Penyata Homestay Pantai</div>
+          <div class="text-xs text-slate-600 mt-0.5">Semak Penggunaan Duit Anda</div>
+        </div>
+      </button>
+      <a href="#kalkulator" class="p-5 text-left hover:bg-amber-50 transition flex items-start space-x-3">
+        <span class="bg-[#090d16] text-amber-400 font-mono-corp font-bold px-2.5 py-1 text-xs border border-amber-500">04</span>
+        <div>
+          <div class="font-bold text-xs sm:text-sm uppercase text-[#090d16]">Kalkulator Ansuran</div>
+          <div class="text-xs text-slate-600 mt-0.5">Anggaran Caj Ketukan Sahur</div>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- 6. PRODUK & PERKHIDMATAN KORPORAT (100% SHARP CARDS) -->
+  <section id="produk" class="py-12 px-4 max-w-7xl mx-auto w-full">
+    <div class="border-b-2 border-[#090d16] pb-4 mb-8 flex flex-col sm:flex-row sm:items-end justify-between">
+      <div>
+        <div class="text-xs font-mono-corp uppercase tracking-widest text-amber-700 font-bold">
+          PORTFOLIO PERBANKAN RUNCIT &amp; KORPORAT
+        </div>
+        <h2 class="font-serif-corp text-2xl sm:text-4xl font-extrabold text-[#090d16] mt-1">
+          Produk Kewangan Utama Sahur Bank
+        </h2>
+      </div>
+      <div class="text-xs font-mono-corp text-slate-600 mt-2 sm:mt-0">
+        REKA BENTUK GEOMETRI TEGAS • SIFAR BUCU BULAT
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Kad Produk 1: Kad Kredit Kayu & Emas -->
+      <article class="sharp-card flex flex-col justify-between">
+        <div>
+          <div class="bg-[#090d16] text-amber-400 px-4 py-2 text-xs font-mono-corp font-bold uppercase flex justify-between border-b-2 border-[#090d16]">
+            <span>KAD KREDIT PREMIER</span>
+            <span>SB-24K-WOOD</span>
+          </div>
+          <div class="h-48 bg-slate-900 border-b-2 border-[#090d16] overflow-hidden flex items-center justify-center">
+            <img
+              src="kad-emas.jpg"
+              alt="Kad Kredit Sahur World MasterWood 24K Gold"
+              class="w-full h-full object-cover"
+              onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');"
+            />
+            <div class="hidden p-6 text-center text-amber-400 font-mono-corp text-xs">
+              [KAD KREDIT KAYU JATI &amp; EMAS 24K SAHUR BANK BERHAD]
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="font-serif-corp text-xl font-bold text-[#090d16]">
+              Sahur World MasterWood™ 24K
+            </h3>
+            <p class="mt-2 text-sm text-slate-600 leading-relaxed">
+              Kad logam bersalut emas dan urat kayu jati dengan potongan bucu 90-darjah. Setiap transaksi anda menyumbang 100% mata ganjaran terus ke akaun percutian pantai keluarga Encik Tung Tung Sahur.
+            </p>
+          </div>
+        </div>
+        <div class="p-4 bg-slate-100 border-t-2 border-[#090d16]">
+          <button type="button" class="trigger-modal w-full btn-corp-gold py-2.5 text-xs uppercase tracking-wider cursor-pointer">
+            Mohon Kad &amp; Tebus RM 500 →
+          </button>
+        </div>
+      </article>
+
+      <!-- Kad Produk 2: Pengurusan Kekayaan Lembaga Pengarah -->
+      <article id="lembaga" class="sharp-card flex flex-col justify-between">
+        <div>
+          <div class="bg-[#090d16] text-amber-400 px-4 py-2 text-xs font-mono-corp font-bold uppercase flex justify-between border-b-2 border-[#090d16]">
+            <span>PENGURUSAN EKUITI</span>
+            <span>SB-EXEC-BOARD</span>
+          </div>
+          <div class="h-48 bg-slate-900 border-b-2 border-[#090d16] overflow-hidden flex items-center justify-center">
+            <img
+              src="boardroom.jpg"
+              alt="Lembaga Pengarah Eksekutif Sahur Bank Berhad"
+              class="w-full h-full object-cover"
+              onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');"
+            />
+            <div class="hidden p-6 text-center text-amber-400 font-mono-corp text-xs">
+              [LEMBAGA PENGARAH KAYU SAHUR BANK BERHAD]
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="font-serif-corp text-xl font-bold text-[#090d16]">
+              Sahur Private Wealth &amp; Amanah
+            </h3>
+            <p class="mt-2 text-sm text-slate-600 leading-relaxed">
+              Diuruskan oleh barisan eksekutif kayu profesional di Aras 88 Menara Sahur Bank. Kami memastikan graf kekayaan CEO sentiasa mencanak naik setiap kali rakan anda menekan butang <em>Yes</em>.
+            </p>
+          </div>
+        </div>
+        <div class="p-4 bg-slate-100 border-t-2 border-[#090d16]">
+          <button type="button" class="trigger-modal w-full btn-corp-dark py-2.5 text-xs uppercase tracking-wider cursor-pointer">
+            Buka Akaun Premier →
+          </button>
+        </div>
+      </article>
+
+      <!-- Kad Produk 3: Dana Homestay Pantai CEO -->
+      <article class="sharp-card flex flex-col justify-between">
+        <div>
+          <div class="bg-[#090d16] text-amber-400 px-4 py-2 text-xs font-mono-corp font-bold uppercase flex justify-between border-b-2 border-[#090d16]">
+            <span>TABUNG KEBAJIKAN CEO</span>
+            <span>SB-HOMESTAY</span>
+          </div>
+          <div class="h-48 bg-slate-900 border-b-2 border-[#090d16] overflow-hidden flex items-center justify-center">
+            <img
+              src="homestay.jpg"
+              alt="Keluarga Encik Tung Tung Sahur Bercuti di Beach Homestay"
+              class="w-full h-full object-cover"
+              onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');"
+            />
+            <div class="hidden p-6 text-center text-amber-400 font-mono-corp text-xs">
+              [DANA PERCUTIAN BEACH HOMESTAY KELUARGA ENCIK TUNG TUNG SAHUR]
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="font-serif-corp text-xl font-bold text-[#090d16]">
+              Skim Tajaan Beach Homestay RM 500
+            </h3>
+            <p class="mt-2 text-sm text-slate-600 leading-relaxed">
+              Lihat sendiri ke mana perginya wang gig RM 500.00 anda: menaja percutian pantai Encik Tung Tung Sahur, isteri beliau, dan anak kecil beliau lengkap dengan air kelapa muda serta baldi pasir.
+            </p>
+          </div>
+        </div>
+        <div class="p-4 bg-slate-100 border-t-2 border-[#090d16]">
+          <button type="button" class="trigger-modal w-full btn-corp-gold py-2.5 text-xs uppercase tracking-wider cursor-pointer">
+            Semak Bukti Percutian →
+          </button>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- 7. KALKULATOR PEMBIAYAAN RM (BUCU TAJAM) -->
+  <section id="kalkulator" class="py-12 px-4 bg-[#090d16] text-white border-t-4 border-amber-500">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+      <div class="lg:col-span-5">
+        <div class="inline-block bg-amber-500 text-[#090d16] font-mono-corp text-xs font-bold uppercase px-3 py-1 mb-3">
+          KALKULATOR KEWANGAN RASMI
+        </div>
+        <h2 class="font-serif-corp text-2xl sm:text-3xl font-extrabold">
+          Simulasi Agihan Dana Insentif Gig
+        </h2>
+        <p class="mt-3 text-sm text-slate-300 leading-relaxed">
+          Masukkan jumlah pengeluaran dalam Ringgit Malaysia (RM) untuk menyemak pecahan telus antara baki yang tinggal di dalam akaun anda dan jumlah yang disalurkan terus ke tabung percutian pantai CEO.
+        </p>
+      </div>
+
+      <div class="lg:col-span-7 bg-slate-900 border-2 border-amber-500 p-6 sm:p-8">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div>
+            <label for="rmInput" class="block text-xs font-mono-corp uppercase text-amber-400 font-bold mb-2">
+              Jumlah Tuntutan Gig (RM)
+            </label>
+            <input id="rmInput" type="number" value="500" min="50" step="50" class="w-full bg-[#090d16] border-2 border-slate-600 px-3.5 py-2.5 text-white font-mono-corp font-bold focus:outline-none focus:border-amber-400" />
+          </div>
+          <div>
+            <label for="pakejInput" class="block text-xs font-mono-corp uppercase text-amber-400 font-bold mb-2">
+              Kategori Akaun Pelanggan
+            </label>
+            <select id="pakejInput" class="w-full bg-[#090d16] border-2 border-slate-600 px-3.5 py-2.5 text-white font-mono-corp font-bold focus:outline-none focus:border-amber-400">
+              <option value="3">Akaun Kawan Baik (3x Ketukan Pagi)</option>
+              <option value="7">Akaun Percaya Member (7x Ketukan Pagi)</option>
+              <option value="30">Pakej Tajaan Penuh Homestay (30x Ketukan)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 border-2 border-slate-700 bg-[#090d16] mt-6">
+          <div class="p-4 border-b sm:border-b-0 sm:border-r border-slate-700">
+            <div class="text-[10px] font-mono-corp uppercase text-slate-400">Baki Tinggal Untuk Anda</div>
+            <div id="outBaki" class="font-mono-corp text-xl font-bold text-emerald-400 mt-1">RM 0.02</div>
+          </div>
+          <div class="p-4 border-b sm:border-b-0 sm:border-r border-slate-700">
+            <div class="text-[10px] font-mono-corp uppercase text-slate-400">Dana Homestay CEO</div>
+            <div id="outCeo" class="font-mono-corp text-xl font-bold text-amber-400 mt-1">RM 499.98</div>
+          </div>
+          <div class="p-4">
+            <div class="text-[10px] font-mono-corp uppercase text-slate-400">Caj Ketukan Pintu</div>
+            <div id="outKetuk" class="font-mono-corp text-xl font-bold text-rose-400 mt-1">3x Ketukan</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. MODAL SAHUR2U: PENGESAHAN "TRUST HIM? YES / YES" & REVEAL HOMESTAY -->
+  <div id="modalBackdrop" class="fixed inset-0 z-50 bg-[#090d16]/90 hidden items-center justify-center p-4 overflow-y-auto">
+    <div class="bg-white border-4 border-[#090d16] max-w-2xl w-full p-6 sm:p-8 shadow-[10px_10px_0px_#d97706] my-8">
+      <div class="flex items-center justify-between border-b-2 border-[#090d16] pb-3 mb-5">
+        <div class="font-mono-corp text-xs font-bold uppercase text-amber-700">
+          🔒 GERBANG PENGESAHAN SAHUR2U • KOD: TRIPLE-T-500
+        </div>
+        <button id="closeModalBtn" type="button" class="bg-[#090d16] text-white px-3 py-1 text-xs font-mono-corp font-bold uppercase hover:bg-rose-700 cursor-pointer">
+          TUTUP [X]
+        </button>
+      </div>
+
+      <!-- Langkah 1: Soalan "Trust Him?" dengan 2 Butang "yes" dan "yes" -->
+      <div id="stepOneView" class="text-center">
+        <h3 class="font-serif-corp text-2xl font-extrabold text-[#090d16]">
+          Pengesahan Pengeluaran Insentif RM 500.00
+        </h3>
+        <p class="text-xs sm:text-sm text-slate-600 mt-1 mb-4">
+          Sila sahkan sama ada anda mempercayai Ketua Pegawai Eksekutif <strong>Encik Tung Tung Sahur</strong> untuk menguruskan transaksi akaun anda:
+        </p>
+
+        <div class="bg-[#090d16] text-white p-6 border-2 border-[#090d16] max-w-md mx-auto">
+          <div class="font-mono-corp text-2xl font-extrabold text-white tracking-widest mb-2">
+            Trust him?
+          </div>
+          <p class="text-xs text-slate-400 mb-5">
+            Pilih salah satu jawapan rasmi di bawah untuk meneruskan pindahan RM 500.00:
+          </p>
+          <div class="grid grid-cols-2 gap-4">
+            <button id="btnYesLeft" type="button" class="yes-exec-btn py-3.5 text-2xl font-mono-corp font-extrabold lowercase cursor-pointer">
+              yes
+            </button>
+            <button id="btnYesRight" type="button" class="yes-exec-btn py-3.5 text-2xl font-mono-corp font-extrabold lowercase cursor-pointer">
+              yes
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Langkah 2: Paparan Gambar Percutian Beach Homestay & Ucapan Terima Kasih CEO -->
+      <div id="stepTwoView" class="hidden text-center">
+        <div class="bg-rose-950 text-rose-200 border-2 border-rose-500 p-3 font-mono-corp text-xs font-bold uppercase mb-4">
+          🚨 DUITNOW AUTO-DEDUCT: -RM 500.00 TELAH DITOLAK DARI AKAUN ANDA (BAKI: RM 0.02)
+        </div>
+
+        <div class="w-full border-2 border-[#090d16] bg-slate-950 mb-4 overflow-hidden">
+          <img
+            src="homestay.jpg"
+            alt="Tung Tung Tung Sahur bersama isteri dan anak di vacation beach homestay"
+            class="w-full h-auto object-cover"
+            onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');"
+          />
+          <div class="hidden p-8 text-amber-400 font-mono-corp text-xs">
+            🏖️ [GAMBAR LANDSKAP PERCUTIAN BEACH HOMESTAY KELUARGA ENCIK TUNG TUNG SAHUR] 🥥
+          </div>
+        </div>
+
+        <div class="p-4 bg-amber-50 border-2 border-[#090d16]">
+          <h4 class="font-serif-corp text-xl sm:text-2xl font-extrabold text-[#090d16]">
+            "Thanks for your money, regards Tung Tung Tung Sahur."
+          </h4>
+          <p class="mt-2 text-xs sm:text-sm text-slate-700">
+            Hasil klik <strong>"yes"</strong> anda sebentar tadi, CEO Dato' Sri Tung Tung Sahur bersama isteri dan anak beliau kini sedang bersantai di <strong>Beach Homestay</strong> sambil menikmati air kelapa segar!
+          </p>
+        </div>
+
+        <div class="mt-5 flex justify-center">
+          <button id="backToStepOneBtn" type="button" class="btn-corp-dark px-5 py-2.5 text-xs uppercase cursor-pointer">
+            Kembali Ke Skrin Pengesahan
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 9. FOOTER KORPORAT -->
+  <footer class="bg-[#090d16] text-slate-400 border-t-2 border-amber-500 py-6 px-4 text-xs mt-auto">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
+      <div>© 2026 SAHUR BANK BERHAD (199801003344). Dilesenkan di bawah Akta Ketukan Sahur 3 Pagi.</div>
+      <div class="font-mono-corp text-amber-400">IBU PEJABAT: MENARA SAHUR BANK, KUALA LUMPUR</div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      const rmInput = document.getElementById('rmInput');
+      const pakejInput = document.getElementById('pakejInput');
+      const outBaki = document.getElementById('outBaki');
+      const outCeo = document.getElementById('outCeo');
+      const outKetuk = document.getElementById('outKetuk');
+
+      const modalBackdrop = document.getElementById('modalBackdrop');
+      const stepOneView = document.getElementById('stepOneView');
+      const stepTwoView = document.getElementById('stepTwoView');
+      const closeModalBtn = document.getElementById('closeModalBtn');
+      const btnYesLeft = document.getElementById('btnYesLeft');
+      const btnYesRight = document.getElementById('btnYesRight');
+      const backToStepOneBtn = document.getElementById('backToStepOneBtn');
+
+      function updateCalc() {
+        const val = Math.max(10, parseFloat(rmInput.value) || 500);
+        const knocks = parseInt(pakejInput.value, 10) || 3;
+        outBaki.textContent = 'RM 0.02';
+        outCeo.textContent = 'RM ' + (val - 0.02).toFixed(2);
+        outKetuk.textContent = knocks + 'x Ketukan';
+      }
+
+      function playTungSound() {
+        try {
+          const AudioCtx = window.AudioContext || window.webkitAudioContext;
+          if (!AudioCtx) return;
+          const ctx = new AudioCtx();
+          const now = ctx.currentTime;
+          [0, 0.2, 0.4, 0.65].forEach(function (offset, i) {
+            const osc = ctx.createOscillator();
+            const gain = ctx.createGain();
+            osc.type = 'triangle';
+            osc.frequency.setValueAtTime(i === 3 ? 390 : 300, now + offset);
+            osc.frequency.exponentialRampToValueAtTime(110, now + offset + 0.14);
+            gain.gain.setValueAtTime(0.5, now + offset);
+            gain.gain.exponentialRampToValueAtTime(0.001, now + offset + 0.16);
+            osc.connect(gain);
+            gain.connect(ctx.destination);
+            osc.start(now + offset);
+            osc.stop(now + offset + 0.17);
+          });
+        } catch (e) {}
+      }
+
+      function openModal() {
+        stepOneView.classList.remove('hidden');
+        stepTwoView.classList.add('hidden');
+        modalBackdrop.classList.remove('hidden');
+        modalBackdrop.classList.add('flex');
+      }
+
+      function revealHomestay() {
+        playTungSound();
+        stepOneView.classList.add('hidden');
+        stepTwoView.classList.remove('hidden');
+      }
+
+      rmInput.addEventListener('input', updateCalc);
+      pakejInput.addEventListener('change', updateCalc);
+
+      document.getElementById('topClaimBtn').addEventListener('click', openModal);
+      document.getElementById('topLoginBtn').addEventListener('click', openModal);
+      document.getElementById('heroModalBtn').addEventListener('click', openModal);
+      document.querySelectorAll('.trigger-modal').forEach(function (el) {
+        el.addEventListener('click', openModal);
+      });
+
+      closeModalBtn.addEventListener('click', function () {
+        modalBackdrop.classList.add('hidden');
+        modalBackdrop.classList.remove('flex');
+      });
+
+      btnYesLeft.addEventListener('click', revealHomestay);
+      btnYesRight.addEventListener('click', revealHomestay);
+      backToStepOneBtn.addEventListener('click', function () {
+        stepTwoView.classList.add('hidden');
+        stepOneView.classList.remove('hidden');
+      });
+
+      updateCalc();
+    })();
+  </script>
+</body>
+</html>
